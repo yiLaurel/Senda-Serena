@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre los mejores destinos turísticos de Querétaro, México con nuestra guía profesional. Hoteles, rutas y experiencias únicas.">
+    <title>Explore Querétaro - Turismo Profesional</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://api.openweathermap.org">
+</head>
+
+<body>
+    
+    <div class="nav-floating">
+        <a href="tel:+5214426388243" class="floating-btn phone" aria-label="Llamar por teléfono"><i class="fas fa-phone-alt"></i></a>
+        <a href="https://wa.me/5214426388243?text=Hola,%20estoy%20interesado%20en%20información%20sobre%20los%20destinos%20turísticos%20de%20Querétaro" class="floating-btn whatsapp" aria-label="Contactar por WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="#contacto" class="floating-btn email" aria-label="Enviar correo electrónico"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Senda<span>Serena</span></div>
+            
+            <ul class="nav-links">
+                <li><a href="#destinos">Destinos</a></li>
+                <li><a href="#hoteles">Hoteles</a></li>
+                <li><a href="#mapa">Mapa</a></li>
+                <li><a href="#rutas">Rutas</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#comentarios">Comentarios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#" class="btn-reserva">Reservar Ahora</a></li>
+            </ul>
+           
+            <div class="hamburger" aria-label="Menú móvil">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+        
+  
+        <div class="header-content">
+            <h1>Descubre la Magia de Querétaro</h1>
+            <p>Explora los destinos más impresionantes del estado, encuentra los mejores hoteles y vive experiencias únicas con nuestra guía turística profesional.</p>
+            <div class="header-buttons">
+                <a href="#destinos" class="btn btn-primary">Explorar Destinos</a>
+                <a href="https://wa.me/5214426388243?text=Hola,%20me%20gustaría%20recibir%20información%20sobre%20Querétaro" class="btn btn-outline" style="border-color: #A7C7E7; color: #A7C7E7;">Contactar Guía</a>
+            </div>
+        </div>
+        
+     
+        <div class="header-scroll">
+            <a href="#destinos" class="scroll-down" aria-label="Desplazarse hacia abajo">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </header>
+    
+
+    <section id="destinos" class="section">
+        <div class="section-title">
+            <h2>Destinos Imperdibles de Querétaro</h2>
+            <p>Descubre los lugares más fascinantes que este estado tiene para ofrecer</p>
+        </div>
+        
+       
+        <div class="destinos-grid">
+        
+            <div class="destino-card" style="--delay:1">
+                <div class="destino-img">
+                    <img src="turismo1/centro.jpg" alt="Centro Histórico de Querétaro" loading="lazy">
+                    <div class="destino-tiempo">Patrimonio de la Humanidad</div>
+                    <div class="destino-clima" data-ciudad="Queretaro">
+                        <i class="fas fa-spinner fa-spin"></i>
+                    </div>
+                </div>
+                <div class="destino-content">
+                    <h3>Centro Histórico</h3>
+                    <p>El corazón de la ciudad con arquitectura colonial, plazas encantadoras y una rica historia.</p>
+                    <div class="destino-info">
+                        <span><i class="fas fa-map-marker-alt"></i> Santiago de Querétaro</span>
+                        <span><i class="fas fa-star"></i> 4.9</span>
+                    </div>
+                    <div class="destino-buttons">
+                        <a href="#mapa" class="btn btn-small btn-map" data-destino="Centro Histórico Querétaro"><i class="fas fa-map-marked-alt"></i> <span style="color: #7c3c98;">Mapa</span></a>
+                        <a href="#galeria-queretaro" class="btn btn-small btn-gallery"><i class="fas fa-images"></i> <span style="color: #7c3c98;">Galería</span></a>
+                    </div>
+                </div>
+            </div>
+            
+           
+            <div class="destino-card" style="--delay:2">
+                <div class="destino-img">
+                    <img src="turismo1/bernal.jpg" alt="Peña de Bernal" loading="lazy">
+                    <div class="destino-tiempo">Pueblo Mágico</div>
+                    <div class="destino-clima" data-ciudad="Bernal">
+                        <i class="fas fa-spinner fa-spin"></i>
+                    </div>
+                </div>
+                <div class="destino-content">
+                    <h3>Peña de Bernal</h3>
+                    <p>El tercer monolito más grande del mundo, rodeado de un encantador pueblo lleno de artesanías.</p>
+                    <div class="destino-info">
+                        <span><i class="fas fa-map-marker-alt"></i> Ezequiel Montes</span>
+                        <span><i class="fas fa-star"></i> 4.8</span>
+                    </div>
+                    <div class="destino-buttons">
+                        <a href="#mapa" class="btn btn-small btn-map" data-destino="Peña de Bernal"><i class="fas fa-map-marked-alt"></i> <span style="color: #7c3c98;">Mapa</span></a>
+                        <a href="#galeria-bernal" class="btn btn-small btn-gallery"><i class="fas fa-images"></i> <span style="color: #7c3c98;">Galería</span></a>
+                    </div>
+                </div>
+            </div>
+            
+           
+            <div class="destino-card" style="--delay:3">
+                <div class="destino-img">
+                    <img src="turismo1/sierra.jpg" alt="Sierra Gorda" loading="lazy">
+                    <div class="destino-tiempo">Reserva de la Biosfera</div>
+                    <div class="destino-clima" data-ciudad="Jalpan">
+                        <i class="fas fa-spinner fa-spin"></i>
+                    </div>
+                </div>
+                <div class="destino-content">
+                    <h3>Sierra Gorda</h3>
+                    <p>Paraíso natural con misiones franciscanas, cascadas y una biodiversidad extraordinaria.</p>
+                    <div class="destino-info">
+                        <span><i class="fas fa-map-marker-alt"></i> Norte de Querétaro</span>
+                        <span><i class="fas fa-star"></i> 4.9</span>
+                    </div>
+                    <div class="destino-buttons">
+                        <a href="#mapa" class="btn btn-small btn-map" data-destino="Sierra Gorda"><i class="fas fa-map-marked-alt"></i> <span style="color: #7c3c98;">Mapa</span></a>
+                        <a href="#galeria-sierra" class="btn btn-small btn-gallery"><i class="fas fa-images"></i> <span style="color: #7c3c98;">Galería</span></a>
+                    </div>
+                </div>
+            </div>
+            
+         
+            <div class="destino-card" style="--delay:4">
+                <div class="destino-img">
+                    <img src="turismo1/tequis.jpg" alt="Tequisquiapan" loading="lazy">
+                    <div class="destino-tiempo">Pueblo Mágico</div>
+                    <div class="destino-clima" data-ciudad="Tequisquiapan">
+                        <i class="fas fa-spinner fa-spin"></i>
+                    </div>
+                </div>
+                <div class="destino-content">
+                    <h3>Tequisquiapan</h3>
+                    <p>Famoso por sus viñedos, quesos y aguas termales, ideal para un fin de semana relajante.</p>
+                    <div class="destino-info">
+                        <span><i class="fas fa-map-marker-alt"></i> Tequisquiapan</span>
+                        <span><i class="fas fa-star"></i> 4.7</span>
+                    </div>
+                    <div class="destino-buttons">
+                        <a href="#mapa" class="btn btn-small btn-map" data-destino="Tequisquiapan"><i class="fas fa-map-marked-alt"></i> <span style="color: #7c3c98;">Mapa</span></a>
+                        <a href="#galeria-tequis" class="btn btn-small btn-gallery"><i class="fas fa-images"></i> <span style="color: #7c3c98;">Galería</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <div id="galerias" style="display:none;">
+       
+        <div id="galeria-queretaro">
+            <a href="turismo1/centro.jpg" data-lightbox="queretaro" data-title="Centro Histórico de Querétaro"></a>
+            <a href="turismo1/acueducto-de-queretaro.jpg" data-lightbox="queretaro" data-title="Acueducto de Querétaro"></a>
+            <a href="turismo1/cerro-de-las-campanas.jpg" data-lightbox="queretaro" data-title="Cerro de las Campanas"></a>
+        </div>
+        
+      
+        <div id="galeria-bernal">
+            <a href="turismo1/bernal.jpg" data-lightbox="bernal" data-title="Peña de Bernal"></a>
+            <a href="turismo1/pueblo-magico-bernal.jpg" data-lightbox="bernal" data-title="Pueblo Mágico Bernal"></a>
+            <a href="turismo1/hotel-bernal.jpg" data-lightbox="bernal" data-title="Hotel en Bernal"></a>
+        </div>
+        
+        
+        <div id="galeria-sierra">
+            <a href="turismo1/sierra.jpg" data-lightbox="sierra" data-title="Sierra Gorda"></a>
+            <a href="turismo1/sierra-gorda-reserva.jpg" data-lightbox="sierra" data-title="Reserva Sierra Gorda"></a>
+            <a href="turismo1/Cascada-El-Chuveje.jpg" data-lightbox="sierra" data-title="Cascada El Chuveje"></a>
+        </div>
+        
+   
+        <div id="galeria-tequis">
+            <a href="turismo1/tequis.jpg" data-lightbox="tequis" data-title="Tequisquiapan"></a>
+            <a href="turismo1/Tequisquiapan-pueblo-magico.jpg" data-lightbox="tequis" data-title="Tequisquiapan Pueblo Mágico"></a>
+            <a href="turismo1/quesos-y-vinos.jpg" data-lightbox="tequis" data-title="Quesos y Vinos"></a>
+        </div>
+    </div>
+    
+   
+    <section id="hoteles" class="section hotels-section">
+        <div class="section-title">
+            <h2>Hoteles Recomendados en Querétaro</h2>
+            <p>Alojamientos seleccionados por calidad, ubicación y experiencias únicas</p>
+        </div>
+        
+
+        <div class="filtros-hoteles">
+            <button class="btn-filtro active" data-categoria="todos">Todos</button>
+            <button class="btn-filtro" data-categoria="ciudad">Ciudad</button>
+            <button class="btn-filtro" data-categoria="lujo">Lujo</button>
+            <button class="btn-filtro" data-categoria="boutique">Boutique</button>
+            <button class="btn-filtro" data-categoria="pueblo-magico">Pueblo Mágico</button>
+        </div>
+        
+       
+        <div class="hoteles-container">
+           
+            <div class="hotel-card" data-categoria="boutique ciudad">
+                <div class="hotel-img">
+                    <img src="turismo1/hotel-centro.jpg" alt="Hotel Boutique en Querétaro" loading="lazy">
+                    <div class="hotel-price">$2,500/noche</div>
+                    <div class="hotel-badge">Recomendado</div>
+                </div>
+                <div class="hotel-content">
+                    <h3>Hotel Boutique Casa del Atrio</h3>
+                    <div class="hotel-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.5 (128 reseñas)</span>
+                    </div>
+                    <p><i class="fas fa-map-marker-alt"></i> Centro Histórico, Querétaro</p>
+                    <div class="hotel-features">
+                        <span><i class="fas fa-wifi"></i> WiFi</span>
+                        <span><i class="fas fa-swimming-pool"></i> Alberca</span>
+                        <span><i class="fas fa-utensils"></i> Restaurante</span>
+                    </div>
+                    <a href="#contacto" class="btn btn-small" data-hotel="Hotel Boutique Casa del Atrio"><span style="color: #7c3c98;">Reservar ahora</span></a>
+                </div>
+            </div>
+            
+      
+            <div class="hotel-card" data-categoria="pueblo-magico boutique">
+                <div class="hotel-img">
+                    <img src="turismo1/hotel-bernal.jpg" alt="Hotel en Bernal con vista a la Peña" loading="lazy">
+                    <div class="hotel-price">$3,200/noche</div>
+                    <div class="hotel-badge">Vista a la Peña</div>
+                </div>
+                <div class="hotel-content">
+                    <h3>Hotel La Posada del Castillo</h3>
+                    <div class="hotel-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.9 (342 reseñas)</span>
+                    </div>
+                    <p><i class="fas fa-map-marker-alt"></i> Bernal, Querétaro</p>
+                    <div class="hotel-features">
+                        <span><i class="fas fa-spa"></i> Spa</span>
+                        <span><i class="fas fa-mountain"></i> Vistas panorámicas</span>
+                        <span><i class="fas fa-utensils"></i> Cocina tradicional</span>
+                    </div>
+                    <a href="#contacto" class="btn btn-small" data-hotel="Hotel La Posada del Castillo"><span style="color: #7c3c98;">Reservar ahora</span></a>
+                </div>
+            </div>
+            
+     
+            <div class="hotel-card" data-categoria="pueblo-magico lujo">
+                <div class="hotel-img">
+                    <img src="turismo1/hotel-tequisquiapan.jpg" alt="Hotel en Tequisquiapan con aguas termales" loading="lazy">
+                    <div class="hotel-price">$3,800/noche</div>
+                    <div class="hotel-badge">Aguas Termales</div>
+                </div>
+                <div class="hotel-content">
+                    <h3>Hotel Hacienda Tequisquiapan</h3>
+                    <div class="hotel-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.8 (215 reseñas)</span>
+                    </div>
+                    <p><i class="fas fa-map-marker-alt"></i> Tequisquiapan, Querétaro</p>
+                    <div class="hotel-features">
+                        <span><i class="fas fa-hot-tub"></i> Aguas termales</span>
+                        <span><i class="fas fa-wine-glass-alt"></i> Cata de vinos</span>
+                        <span><i class="fas fa-bicycle"></i> Tours en bicicleta</span>
+                    </div>
+                    <a href="#contacto" class="btn btn-small" data-hotel="Hacienda Tequisquiapan"><span style="color: #7c3c98;">Reservar ahora</span></a>
+                </div>
+            </div>
+        </div>
+        
+     
+        <div class="ver-mas">
+            <a href="https://wa.me/5214426388243?text=Hola,%20me%20gustaría%20recibir%20más%20opciones%20de%20hoteles%20en%20Querétaro" class="btn btn-outline" style="border-color: #A7C7E7; color: #A7C7E7;">Ver más hoteles</a>
+        </div>
+    </section>
+    
+    
+    <section id="mapa" class="section map-section">
+        <div class="section-title">
+            <h2>Mapa de Querétaro</h2>
+            <p>Explora visualmente los principales atractivos turísticos del estado</p>
+        </div>
+        
+    
+        <div class="map-filters">
+            <button class="btn-filter active" data-filter="all">Todos</button>
+            <button class="btn-filter" data-filter="ciudad"><i class="fas fa-city"></i> Ciudad</button>
+            <button class="btn-filter" data-filter="pueblo-magico"><i class="fas fa-archway"></i> Pueblos Mágicos</button>
+            <button class="btn-filter" data-filter="naturaleza"><i class="fas fa-mountain"></i> Naturaleza</button>
+            <button class="btn-filter" data-filter="vinicola"><i class="fas fa-wine-glass-alt"></i> Ruta del Vino</button>
+        </div>
+        
+       
+        <div class="map-container">
+            <div id="map" style="width: 100%; height: 600px;"></div>
+            <div class="location-info" id="locationInfo"></div>
+        </div>
+        
+
+        <div class="map-legend">
+            <h3>Leyenda del Mapa</h3>
+            <ul>
+                <li><i class="fas fa-map-marker-alt icon-city"></i> Ciudad</li>
+                <li><i class="fas fa-map-marker-alt icon-magic"></i> Pueblos Mágicos</li>
+                <li><i class="fas fa-map-marker-alt icon-nature"></i> Áreas Naturales</li>
+                <li><i class="fas fa-map-marker-alt icon-wine"></i> Viñedos</li>
+                <li><i class="fas fa-map-marker-alt icon-hotel"></i> Hoteles Recomendados</li>
+            </ul>
+        </div>
+    </section>
+    
+
+    <section id="rutas" class="section routes-section">
+        <div class="section-title">
+            <h2>Rutas Turísticas en Querétaro</h2>
+            <p>Descubre itinerarios cuidadosamente diseñados para maximizar tu experiencia</p>
+        </div>
+        
+     
+        <div class="routes-container">
+            
+            <div class="route-card">
+                <div class="route-img">
+                    <img src="turismo1/4pueblosmagicos.jpeg" alt="Ruta de Pueblos Mágicos" loading="lazy">
+                    <div class="route-duration">3 días / 2 noches</div>
+                    <div class="route-badge">Más Popular</div>
+                </div>
+                <div class="route-content">
+                    <h3>Ruta de Pueblos Mágicos</h3>
+                    <p>Descubre la magia de Bernal y Tequisquiapan en este viaje lleno de encanto.</p>
+                    <div class="route-stops">
+                        <h4>Paradas principales:</h4>
+                        <ul>
+                            <li><i class="fas fa-map-pin"></i> Peña de Bernal</li>
+                            <li><i class="fas fa-map-pin"></i> Tequisquiapan</li>
+                            <li><i class="fas fa-map-pin"></i> Viñedos Freixenet</li>
+                            <li><i class="fas fa-map-pin"></i> Pueblo de Amealco</li>
+                        </ul>
+                    </div>
+                    <div class="route-details">
+                        <div class="route-price">Desde $8,900 por persona</div>
+                        <div class="route-includes">
+                            <span><i class="fas fa-hotel"></i> Hoteles 4*</span>
+                            <span><i class="fas fa-utensils"></i> Desayunos</span>
+                            <span><i class="fas fa-bus"></i> Transporte</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/5214426388243?text=Hola,%20estoy%20interesado%20en%20la%20Ruta%20de%20Pueblos%20Mágicos%20de%20Querétaro" class="btn btn-small"><span style="color: #7c3c98;">Consultar disponibilidad</span></a>
+                </div>
+            </div>
+            
+           
+            <div class="route-card">
+                <div class="route-img">
+                    <img src="turismo1/quesos-y-vinos.jpg" alt="Ruta del Vino y Queso" loading="lazy">
+                    <div class="route-duration">2 días / 1 noche</div>
+                    <div class="route-badge">Gastronómica</div>
+                </div>
+                <div class="route-content">
+                    <h3>Ruta del Vino y Queso</h3>
+                    <p>Degusta los mejores vinos y quesos artesanales de la región queretana.</p>
+                    <div class="route-stops">
+                        <h4>Paradas principales:</h4>
+                        <ul>
+                            <li><i class="fas fa-map-pin"></i> Viñedos La Redonda</li>
+                            <li><i class="fas fa-map-pin"></i> Queserías artesanales</li>
+                            <li><i class="fas fa-map-pin"></i> Freixenet México</li>
+                            <li><i class="fas fa-map-pin"></i> Cava de Quesos</li>
+                        </ul>
+                    </div>
+                    <div class="route-details">
+                        <div class="route-price">Desde $6,500 por persona</div>
+                        <div class="route-includes">
+                            <span><i class="fas fa-hotel"></i> Hotel Boutique</span>
+                            <span><i class="fas fa-wine-glass-alt"></i> Catas incluidas</span>
+                            <span><i class="fas fa-bus"></i> Transporte</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/5214426388243?text=Hola,%20estoy%20interesado%20en%20la%20Ruta%20del%20Vino%20y%20Queso%20de%20Querétaro" class="btn btn-small"><span style="color: #7c3c98;">Consultar disponibilidad</span></a>
+                </div>
+            </div>
+            
+            
+            <div class="route-card">
+                <div class="route-img">
+                    <img src="turismo1/cerro-de-las-campanas.jpg" alt="Ruta Colonial" loading="lazy">
+                    <div class="route-duration">1 día</div>
+                    <div class="route-badge">Cultural</div>
+                </div>
+                <div class="route-content">
+                    <h3>Ruta Colonial</h3>
+                    <p>Recorre los lugares más emblemáticos del Centro Histórico de Querétaro.</p>
+                    <div class="route-stops">
+                        <h4>Paradas principales:</h4>
+                        <ul>
+                            <li><i class="fas fa-map-pin"></i> Acueducto</li>
+                            <li><i class="fas fa-map-pin"></i> Cerro de las Campanas</li>
+                            <li><i class="fas fa-map-pin"></i> Plaza de Armas</li>
+                            <li><i class="fas fa-map-pin"></i> Templo de Santa Rosa</li>
+                        </ul>
+                    </div>
+                    <div class="route-details">
+                        <div class="route-price">Desde $1,200 por persona</div>
+                        <div class="route-includes">
+                            <span><i class="fas fa-landmark"></i> Guía experto</span>
+                            <span><i class="fas fa-utensils"></i> Comida típica</span>
+                            <span><i class="fas fa-bus"></i> Transporte</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/5214426388243?text=Hola,%20estoy%20interesado%20en%20la%20Ruta%20Colonial%20de%20Querétaro" class="btn btn-small"><span style="color: #7c3c98;">Consultar disponibilidad</span></a>
+                </div>
+            </div>
+        </div>
+        
+       
+        <div class="ver-mas">
+            <a href="https://wa.me/5214426388243?text=Hola,%20me%20gustaría%20recibir%20más%20información%20sobre%20rutas%20turísticas%20en%20Querétaro" class="btn btn-outline" style="border-color: #A7C7E7; color: #A7C7E7;">Ver más rutas</a>
+        </div>
+    </section>
+    
+
+ <style>
+    /* Estilo para la sección de testimonios */
+    .testimonials {
+        background: linear-gradient(135deg, #f9f3ff 0%, #e8d6ff 100%);
+        padding: 40px 20px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(106, 13, 173, 0.1);
+        margin-bottom: 30px;
+    }
+    
+    .testimonials .section-title h2 {
+        color: #6a0dad;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .testimonials .section-title p {
+        color: #8a2be2;
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+    
+    .ver-mas .btn-outline {
+        border: 2px solid #9c4dff;
+        color: #6a0dad;
+        padding: 12px 25px;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+    }
+    
+    .ver-mas .btn-outline:hover {
+        background: #6a0dad;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(106, 13, 173, 0.3);
+    }
+    
+    /* Estilo para la sección de comentarios - Versión mejorada */
+    #comentarios {
+        background: linear-gradient(135deg, #6a0dad 0%, #8a2be2 100%);
+        color: white;
+        padding: 40px 20px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(106, 13, 173, 0.3);
+        margin-top: 40px;
+    }
+    
+    #comentarios .section-title h2 {
+        color: #fff;
+        font-size: 2.5rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    #comentarios .section-title p {
+        color: #e0c4ff;
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
+    
+    /* Efecto de brillo al pasar el mouse */
+    #comentarios:hover {
+        animation: glow 1.5s ease-in-out infinite alternate;
+    }
+    
+    @keyframes glow {
+        from {
+            box-shadow: 0 0 10px rgba(106, 13, 173, 0.5);
+        }
+        to {
+            box-shadow: 0 0 20px rgba(154, 50, 255, 0.8);
+        }
+    }
+</style>
+
+
+<section id="testimonios" class="section testimonials">
+    <div class="section-title">
+        <h2>Testimonios de Viajeros</h2>
+        <p>Lo que dicen nuestros clientes satisfechos</p>
+    </div>
+    
+    <div class="ver-mas">
+        <a href="https://wa.me/5214426388243?text=Hola,%20quiero%20compartir%20mi%20testimonio%20sobre%20mi%20experiencia%20en%20Querétaro" class="btn btn-outline">
+            ✨ contactanos por whatsapp ;) ✨
+        </a>
+    </div>
+</section>
+
+
+<section id="comentarios" class="section">
+    <div class="section-title">
+        <h2>Comentarios de Visitantes</h2>
+        <p>Comparte tu experiencia en Querétaro</p>
+    </div>
+</section>
+
+        <div class="comentarios-container">
+            <div id="lista-comentarios" class="lista-comentarios">
+                
+            </div>
+            
+            <div class="formulario-comentario">
+                <h3>Deja tu comentario</h3>
+                <form id="form-comentario">
+                    <input type="hidden" id="pagina" name="pagina" value="index">
+                    
+                    <div class="form-group">
+                        <label for="nombre">Nombre *</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="comentario">Comentario *</label>
+                        <textarea id="comentario" name="comentario" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Enviar Comentario</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+   
+    <section id="contacto" class="section contact">
+        <div class="section-title">
+            <h2>Contacto</h2>
+            <p>¿Listo para planear tu aventura en Querétaro? Contáctanos</p>
+        </div>
+        
+        <div class="contact-container">
+  
+            <div class="contact-info">
+                <h3>Información de Contacto</h3>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Teléfono</h4>
+                            <a href="tel:+5214426388243">+52 1 442 638 8243</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>WhatsApp</h4>
+                            <a href="https://wa.me/5214426388243?text=Hola,%20estoy%20interesado%20en%20información%20turística%20de%20Querétaro">Envíanos un mensaje</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <a href="mailto:info@explorequeretaro.com">info@explorequeretaro.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Oficinas</h4>
+                            <p>Av. Constituyentes 123, Querétaro</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Horario</h4>
+                            <p>Lunes a Viernes: 9:00 - 18:00</p>
+                            <p>Sábados: 10:00 - 14:00</p>
+                        </div>
+                    </div>
+                </div>
+                
+              
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                </div>
+            </div>
+            
+
+            <div class="contact-form">
+                <form id="contactForm">
+                    <input type="hidden" id="tipoConsulta" name="tipoConsulta" value="general">
+                    
+                    <div class="form-group">
+                        <label for="name">Nombre Completo *</label>
+                        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" placeholder="Tu email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Teléfono *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Tu teléfono" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="trip-type">Tipo de Viaje *</label>
+                        <select id="trip-type" name="trip-type" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="individual">Viaje Individual</option>
+                            <option value="pareja">Pareja</option>
+                            <option value="familiar">Familiar</option>
+                            <option value="grupo">Grupo</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="fecha">Fecha Tentativa</label>
+                        <input type="date" id="fecha" name="fecha">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensaje *</label>
+                        <textarea id="message" name="message" placeholder="Cuéntanos sobre tu viaje ideal a Querétaro" required></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter" checked>
+                        <label for="newsletter">Deseo recibir ofertas y novedades</label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+   
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">Explore<span>Querétaro</span></div>
+                    <p>Tu guía profesional para descubrir los mejores destinos turísticos de Querétaro.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="tel:+5214426388243"><i class="fas fa-phone-alt"></i> +52 1 442 638 8243</a></li>
+                        <li><a href="mailto:info@explorequeretaro.com"><i class="fas fa-envelope"></i> info@explorequeretaro.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Constituyentes 123, Querétaro</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© <span id="year"></span> ExploreQuerétaro. Todos los derechos reservados.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa" aria-hidden="true"></i>
+                    <i class="fab fa-cc-mastercard" aria-hidden="true"></i>
+                    <i class="fab fa-cc-amex" aria-hidden="true"></i>
+                    <i class="fab fa-cc-paypal" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+   
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-modal" aria-label="Cerrar modal">&times;</span>
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>¡Gracias por contactarnos!</h3>
+            <p>Tu mensaje ha sido enviado correctamente. Uno de nuestros expertos en viajes se pondrá en contacto contigo en las próximas 24 horas para ayudarte a planear tu aventura en Querétaro.</p>
+            <button class="btn btn-primary modal-btn">Aceptar</button>
+        </div>
+    </div>
+
+   
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="app.js"></script>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        cargarComentarios();
+        
+       
+        document.getElementById('form-comentario').addEventListener('submit', function(e) {
+            e.preventDefault();
+            enviarComentario();
+        });
+    });
+
+    function cargarComentarios() {
+        const formData = new FormData();
+        formData.append('action', 'fetch');
+        formData.append('pagina', document.getElementById('pagina').value);
+        
+        fetch('comentarios.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                const contenedor = document.getElementById('lista-comentarios');
+                contenedor.innerHTML = '';
+                
+                if (data.comentarios.length === 0) {
+                    contenedor.innerHTML = '<p>No hay comentarios aún. ¡Sé el primero en comentar!</p>';
+                    return;
+                }
+                
+                data.comentarios.forEach(comentario => {
+                    const comentarioHTML = `
+                        <div class="comentario-item">
+                            <div class="comentario-header">
+                                <div class="comentario-avatar">${comentario.nombre.charAt(0).toUpperCase()}</div>
+                                <div class="comentario-info">
+                                    <h4>${comentario.nombre}</h4>
+                                    <span class="fecha">${formatearFecha(comentario.fecha)}</span>
+                                </div>
+                            </div>
+                            <div class="comentario-texto">
+                                <p>${comentario.comentario}</p>
+                            </div>
+                        </div>
+                    `;
+                    contenedor.insertAdjacentHTML('beforeend', comentarioHTML);
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Error al cargar comentarios:', error);
+        });
+    }
+
+    function enviarComentario() {
+        const form = document.getElementById('form-comentario');
+        const formData = new FormData(form);
+        formData.append('action', 'insert');
+        
+        fetch('comentarios.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Gracias por tu comentario. Será revisado por un administrador antes de publicarse.');
+                form.reset();
+                cargarComentarios();
+            } else {
+                alert('Hubo un error al enviar tu comentario. Por favor intenta nuevamente.');
+            }
+        })
+        .catch(error => {
+            console.error('Error al enviar comentario:', error);
+            alert('Hubo un error al enviar tu comentario. Por favor intenta nuevamente.');
+        });
+    }
+
+    function formatearFecha(fechaString) {
+        const opciones = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+        const fecha = new Date(fechaString);
+        return fecha.toLocaleDateString('es-ES', opciones);
+    }
+    </script>
+</body>
+</html>
